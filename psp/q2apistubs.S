@@ -1,0 +1,11 @@
+	.set noreorder
+
+#include "pspstub.s"
+
+	STUB_START "q2refpspgu",0x00090000,0x00010005
+	STUB_FUNC 0x12345678,GetRefAPI
+	STUB_END
+
+	STUB_START "q2game",0x00090000,0x00010005
+	STUB_FUNC 0x87654321,GetGameAPI
+	STUB_END
